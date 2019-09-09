@@ -38,15 +38,9 @@ pymongo==3.8.0
 
 ### 项目部署
 
-> 笔者采用三个节点器来爬取数据，OS都为Ubuntu18.01
-> 
-> 一个节点放StockList部分，其他两个节点放StockData部分
-> 
-> 并且至少一个节点安装redis，一个节点安装MongoDB
-> 
-> 环境配置采用Anaconda3
+笔者采用三个节点器来爬取数据，OS都为Ubuntu18.04。一个节点放StockList部分，其他两个节点放StockData部分。环境配置采用Anaconda3
 
-创建运行环境
+1.创建运行环境
 
 ```
 conda env create -f environment.yaml
