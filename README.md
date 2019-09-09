@@ -1,1 +1,5 @@
-### [东方财富网]([http://www.eastmoney.com/](http://www.eastmoney.com/)沪深A股爬虫
+### 东方财富网沪深A股分布式爬虫
+
+项目分为两部分：
+
+stock
