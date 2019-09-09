@@ -46,6 +46,38 @@ pymongo==3.8.0
 conda env create -f environment.yaml
 ```
 
+2.将开始链接（stock:start_url）写入redis
+
+```
+sadd stock:start_url http://2.push2.eastmoney.com/api/qt/clist/get?&pn=1&pz=20&po=1&np=2&fltt=2&fid=f3&fs=m:0+t:6,m:0+t:13,m:0+t:80&fields=f12,f14 
+
+sadd stock:start_url http://94.push2.eastmoney.com/api/qt/clist/get?&pn=1&pz=20&po=1&np=2&fltt=2&fid=f3&fs=m:1+t:2&fields=f12,f14
+```
+
+3.爬取股票数据下载链接
+
+进入StockList项目下执行：
+
+```
+scrapy crawl stocklist
+```
+
+4.爬取股票数据到MongoDB
+
+分别进入StockData目录下执行：
+
+```
+scrapy crawl stockdata
+```
+
+5.查看MongoDB数据
+
+考虑到爬取速度，所有数据存入一个集合，每支股票数据对应一个文档
+
+![](./mongo_data.png)
+
+
+
 
 
 
