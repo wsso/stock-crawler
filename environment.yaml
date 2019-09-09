@@ -1,4 +1,4 @@
-name: spider_py35
+name: stock_py35
 channels:
   - defaults
 dependencies:
@@ -61,5 +61,5 @@ dependencies:
     - requests==2.22.0
     - scrapy-redis==0.6.8
     - urllib3==1.25.3
-prefix: Z:\Anaconda3\envs\spider_py35
+prefix: Z:\Anaconda3\envs\stock_py35
 
