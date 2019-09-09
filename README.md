@@ -1,5 +1,11 @@
 ### 东方财富网沪深A股分布式爬虫
 
-项目分为两部分：
+实际是两个爬虫：
 
-stock
+- StockList部分用于爬取股票数据下载链接存入redis
+
+- StockData部分从redis中获取下载链接并将数据存入MongoDB
+
+运行环境：
+
+Python-3.5
