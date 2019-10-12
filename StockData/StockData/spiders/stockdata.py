@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy_redis.spiders import RedisSpider
-from hdfs import Client
 from scrapy import log
 import re
 from StockData.items import StockdataItem
