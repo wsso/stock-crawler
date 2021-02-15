@@ -8,7 +8,7 @@
 from scrapy import signals
 from StockData.settings import UserAgentPOOL
 import random
-from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 
 class StockdataSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,

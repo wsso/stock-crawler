@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy_redis.spiders import RedisSpider
-from scrapy import log
+import logging
 import re
 from StockData.items import StockdataItem
 import datetime
@@ -19,11 +19,9 @@ class StockdataSpider(RedisSpider):
     def parse(self, response):
 
         item = StockdataItem()
-
-        self.log('响应编码： ' + response.encoding, level=log.INFO)
-        self.log('解析开始！', level=log.INFO)
-        self.log('响应URL： ' + str(response.url), level=log.INFO)
-
+        logging.log(logging.INFO, '响应编码： ' + response.encoding)
+        logging.log(logging.INFO, '解析开始！')
+        logging.log(logging.INFO, '响应URL： ' + str(response.url))
         # 正则取出code 上海0XXXXXX 深圳1XXXXXX
         pattern0 = re.compile('.*?code=0(\d+).*?')
         pattern1 = re.compile('.*?code=1(\d+).*?')
