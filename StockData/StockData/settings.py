@@ -102,11 +102,11 @@ SCHEDULER_PERSIST = True
 # 指定爬虫起始URL类型为set
 REDIS_START_URLS_AS_SET = True
 # 指定redis数据库的连接参数
-REDIS_HOST = '192.168.1.11'
+REDIS_HOST = '127.0.0.1'
 REDIS_PORT = '6379'
 
 # 指定MongoDB的连接参数
-MONGO_HOST = "192.168.1.11"  # 主机IP
+MONGO_HOST = "127.0.0.1"  # 主机IP
 MONGO_PORT = 27017  # 端口号
 MONGO_DB = "test"  # 库名
 MONGO_COLL = "alldata"  # collection名
